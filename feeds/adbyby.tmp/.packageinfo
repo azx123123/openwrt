@@ -1,0 +1,44 @@
+Source-Makefile: feeds/adbyby/luci-app-adbyby-plus/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-adbyby-plus
+Submenu: 3. Applications
+Version: 2.0K5
+Depends: +libc +uclient-fetch +ipset +dnsmasq-full +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for Adbyby
+Maintainer: OpenWrt LuCI community
+Source: 
+Type: ipkg
+Description: LuCI support for Adbyby
+https://github.com/openwrt/luci
+OpenWrt LuCI community
+@@
+
+
+Source-Makefile: feeds/adbyby/no-adbyby/Makefile
+
+Package: adbyby
+Version: 2.7-20200315
+Depends: +libc @(i386||x86_64||arm||mipsel||mips||aarch64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Powerful adblock module to block ad.
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Adbyby is a powerful adblock module to block ad,just like adblock.
+http://www.adbyby.com/
+
+@@
+
+
